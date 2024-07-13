@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers and Transactions</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="my-5 text-center">Customers & Transactions</h1>
+      
+        <!-- Input fields for filtering -->
+        <div class="mb-3 w-75 m-auto">
+            <input type="text" id="filterNameInput" class="form-control" placeholder="Filter by customer name">
+        </div>
+        <div class="mb-3 w-75 m-auto">
+            <input type="number" id="filterAmountInput" class="form-control" placeholder="Filter by minimum amount">
+        </div>
+    
+
+
+        <!-- Table to display customers and transactions -->
+        <table id="customersTable" class="table table-striped text-center my-5 shadow">
+            <thead>
+                <tr>
+                    <th class="bg-dark-subtle">Customer Name</th>
+                    <th class="bg-dark-subtle">Transaction Date</th>
+                    <th class="bg-dark-subtle">Transaction Amount</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Pagination controls -->
+        <nav>
+          <ul id="paginationControls" class="pagination justify-content-center"></ul>
+        </nav>
+
+        <!-- Chart to display transactions -->
+        <canvas id="transactionsChart" class="py-5 w-75 h-50 m-auto "></canvas>
+    </div>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
